@@ -19,16 +19,16 @@ table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.d
 
 table.dataTable thead th, table.dataTable tfoot th {
 	font-weight: bold;
-	background-color: #129ec9 !important;
+	background-color: #129edd !important;
 	color: #FFF !important;
-	border-bottom: 1px solid #555 !important;
+	border-bottom: 1px solid #129ec9 !important;
 	padding: 4px 18px !important;
 	font-family: Georgia;
 }
 
 table.dataTable thead {
 	background-color: #FFF;
-	box-shadow: 0 1px 3px 0 #333;
+	box-shadow: 0 1px 3px 0 #129ec9;
 }
 
 .thead-fixed {

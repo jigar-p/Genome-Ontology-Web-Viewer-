@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BIMM 182 - Final Project</title>
+    <!-- <meta http-equiv="refresh" content="300"> -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+    <!-- INCLUDES -->
+    <!-- Base styles: Libraries -->
+    <link rel="stylesheet" href="css/lib/bootstrap.css" />
+    <link rel="stylesheet" href="css/lib/bootstrap-responsive.css" />
+    <link rel="stylesheet" href="css/lib/font-awesome-4.2.0.css" />
+    <link rel="stylesheet" href="css/lib/jquery.dataTables.min.css" />
+
+    <!-- Base styles -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/base-datatable.css" />
+
+    <!-- JS: Libraries -->
+    <script src="js/lib/jquery-1.11.1.js"></script>
+    <script src="js/lib/jquery.dataTables.min.js"></script>
+    <script src="js/lib/tabletop.js"></script>
+    <script src="js/lib/underscore.js"></script>
+    <script src="js/lib/handlebars-v1.3.0.js"></script>
+    <!-- End Google Analytics Javascript -->
+</head>
+<body>
+    <!-- Content-->
+    <div class="content">
+
+    <!-- CONTENT GOES HERE -->
+    <div id="body-content">
+        <h1 class="hide-iframe">Project name goes here</h1>
+        <!-- Subhead -->
+        <div class="header header-sub hide-desktop show-iframe">
+            <div class="header-sub-header">
+                <p>BIMM 182 Final Project</p>
+            </div>
+        </div>
+        <!-- Content box-->
+        <div id="content-box">
+            <p id="first-p" class="intro-text">By: Jigar Patel and Jenny Lee</p>
+            <table id="searchable-table" class="display">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Type</th>
+                        <th>Location</th>
+                        <th>Size</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        <!-- Close content box-->
+       </div>
+       <div id="footer" class="header hide-desktop show-mobile">
+            <a href="#">Scroll to top</a>
+        </div>
+    <!-- Close body content-->
+    </div>
+    <!-- Templates -->
+    <script id="datatable-template" type="text/x-handlebars-template">
+        {{#each elements}}
+            <tr>
+                <td data-title="Company:">{{ company }}</td>
+                <td data-title="Type:">{{ type }}</td>
+                <td data-title="Location:">{{ location }}</td>
+                <td data-title="Size:">{{ size }}</td>
+            </tr>
+        {{/each}}
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current');   // Don't need to specify chart libraries!
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        var wrapper = new google.visualization.ChartWrapper({
+          chartType: 'PieChart',
+
+          //dataSourceUrl: 'http://spreadsheets.google.com/tq?key=pCQbetd-CptGXxxQIG7VFIQ&pub=1',
+          dataSourceUrl: 'http://spreadsheets.google.com/tq?key=1OBzkmI1PZIu2jwLhSWbyGFKCVh65Y7e4mi7f_qQo3Ig&pub=1',
+          query: 'SELECT C,COUNT(C) GROUP BY C',
+          options: {'title': 'Countries'},
+          containerId: 'vis_div'
+        });
+        wrapper.draw()
+      }
+    </script>
+  </head>
+  <body style="font-family: Arial;border: 0 none;">
+    <div id="vis_div" style="width: 600px; height: 400px;"></div>
+  </body>
+
+    <!-- Custom JS -->
+    <script src="js/base.js"></script>
+    <script src="js/datatable-tabletop-load.js"></script>
+    <!-- Close content-->
+    </div>
+    </body>
+</html>

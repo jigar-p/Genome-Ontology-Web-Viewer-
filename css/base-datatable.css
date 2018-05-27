@@ -21,14 +21,13 @@ table.dataTable thead th, table.dataTable tfoot th {
 	font-weight: bold;
 	background-color: #129edd !important;
 	color: #FFF !important;
-	border-bottom: 1px solid #129ec9 !important;
+	border-bottom: none;
 	padding: 4px 18px !important;
-	font-family: Georgia;
+	font-family: Arial;
 }
 
 table.dataTable thead {
 	background-color: #FFF;
-	box-shadow: 0 1px 3px 0 #129ec9;
 }
 
 .thead-fixed {
@@ -63,14 +62,9 @@ table.dataTable thead {
 		padding: 4px 10px;
 	}
 
-	table.dataTable tr {
-		border: 1px solid #ccc !important;
-	}
-
 	table.dataTable td {
 		/* Behave  like a "row" */
 		border: none !important;
-		border-bottom: 1px solid #eee !important;
 		position: relative !important;
 		padding-left: 50% !important;
 		white-space: normal !important;

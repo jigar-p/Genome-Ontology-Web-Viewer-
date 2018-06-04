@@ -45,10 +45,10 @@
             <table id="searchable-table" class="display">
                 <thead>
                     <tr>
-                        <th>Company</th>
-                        <th>Type</th>
-                        <th>Location</th>
-                        <th>Size</th>
+                        <th>ID</th>
+                        <th>Prosite</th>
+                        <th>pfam</th>
+                        
                     </tr>
                 </thead>
                 <tbody></tbody>
@@ -67,14 +67,14 @@
     <script id="datatable-template" type="text/x-handlebars-template">
         {{#each elements}}
             <tr>
-                <td data-title="Company:">{{ company }}</td>
-                <td data-title="Type:">{{ type }}</td>
-                <td data-title="Location:">{{ location }}</td>
-                <td data-title="Size:">{{ size }}</td>
+                <td data-title="ID:">{{ id }}</td>
+                <td data-title="Prosite:">{{ prosite }}</td>
+                <td data-title="Pfam:">{{ pfam }}</td>
+
             </tr>
         {{/each}}
     </script>
-<align="center">
+
     <!-- PIE CHART  -->
     <div class="pie" align="center">
       <h3>Pie Chart of Top 20 'GO' Terms</h3>
@@ -98,7 +98,6 @@
         }
       </script>
     </div>
-  </center>
   </head>
   <body style="font-family: Arial;border: 0 none;">
     <div id="vis_div" style="width: 600px; height: 400px;"></div>

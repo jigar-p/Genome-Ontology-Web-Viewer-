@@ -7,7 +7,7 @@ var link = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQZEzAfmfmdmsuolTLt4
 // Google Docs spreadsheet key
 //var spreadsheet_key = '1hHJJmRBA1D6-g9wtfvnjvsndP-NxgyzOmFJBC8L2PPQ';
 // san diego var spreadsheet_key = '1OBzkmI1PZIu2jwLhSWbyGFKCVh65Y7e4mi7f_qQo3Ig'
-var spreadsheet_key = '1FF0VlPy77z5LMZrOa6ohh7Xw0itB75pOiuTHaHrau5U' 
+var spreadsheet_key = '1FF0VlPy77z5LMZrOa6ohh7Xw0itB75pOiuTHaHrau5U'
 // Template sources and what DIVs they will appear in
 var templates = [
     {
@@ -77,9 +77,6 @@ function loadDataTable() {
         "aoColumns": [
            {
                 "sWidth": "30%"
-                // "sType": "formatted-num"
-            },{
-                "sWidth": "23%"
                 // "sType": "formatted-num"
             },{
                 "sWidth": "23%"

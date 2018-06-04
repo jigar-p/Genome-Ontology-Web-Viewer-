@@ -13,7 +13,7 @@ table.dataTable {
 table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc, table.dataTable thead .sorting, table.dataTable tbody th, table.dataTable tbody td {
 	max-width: 10px;
 	text-overflow: ellipsis;
-	white-space: nowrap;
+	white-space: normal;
 	overflow: hidden;
 }
 
@@ -79,7 +79,7 @@ table.dataTable thead {
 		left: 6px !important;
 		width: 45% !important;
 		padding-right: 10px !important;
-		white-space: nowrap !important;
+		white-space: normal !important;
 		text-align:left !important;
 		font-weight: bold !important;
 	}

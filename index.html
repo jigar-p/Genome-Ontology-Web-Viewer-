@@ -46,8 +46,10 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Prosite</th>
                         <th>Pfam</th>
+                        <th>Prosite</th>
+                        <th>Blast</th>
+                        <th>Interpro</th>
 
                     </tr>
                 </thead>
@@ -68,8 +70,10 @@
         {{#each elements}}
             <tr>
                 <td data-title="ID:">{{ id }}</td>
-                <td data-title="Prosite:">{{ prosite }}</td>
                 <td data-title="Pfam:">{{ pfam }}</td>
+                <td data-title="Prosite:">{{ prosite }}</td>
+                <td data-title="Blast:">{{ blast }}</td>
+                <td data-title="Interpro:">{{ interpro }}</td>
 
             </tr>
         {{/each}}

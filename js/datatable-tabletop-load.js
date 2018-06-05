@@ -110,7 +110,15 @@ function loadToDOM(tabletop_data, tabletop) {
         var handlebarscompile = Handlebars.compile(source);
 
 		// Render the templates onto page
-		$(template_html).append(handlebarscompile( tabletop.sheets(sheet) ));
+    var info = handlebarscompile( tabletop.sheets(sheet) );
+    // add bullet points and line breaks
+    info_replaced = info.replace(/,/g, '<br>• ');
+    info_replaced = info_replaced.replace(/:">/g, ':\">• ');
+    info_replaced = info_replaced.replace(/\//g, '\/<br>');
+    // remove <br> from html code, remove bullet points from ID col
+    info_replaced = info_replaced.replace(/<\/<br>/g, '</');
+    info_replaced = info_replaced.replace(/ID:">• /g,'ID:">')
+		$(template_html).append( info_replaced );
 	// Close each statement
     }, this);
 

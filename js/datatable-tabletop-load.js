@@ -88,7 +88,10 @@ function loadDataTable() {
                 "sWidth": "22.5%"
                   // "sType": "formatted-num"
             },{
-                "sWidth": "22.5%"
+                "sWidth": "10.5%"
+                      // "sType": "formatted-num"
+            },{
+                "sWidth": "10.5%"
             }
         ],
         // Fix thead to top of page when scrolling past it

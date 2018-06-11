@@ -120,7 +120,7 @@ function loadToDOM(tabletop_data, tabletop) {
     info_replaced = info_replaced.replace(/\//g, '\/<br>');
     // remove <br> from html code, remove bullet points from ID col
     info_replaced = info_replaced.replace(/<\/<br>/g, '</');
-    info_replaced = info_replaced.replace(/ID:">• /g,'ID:">')
+    info_replaced = info_replaced.replace(/ID:">• /g,'ID:">');
 		$(template_html).append( info_replaced );
 	// Close each statement
     }, this);
